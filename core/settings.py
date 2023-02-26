@@ -47,7 +47,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'CSRF_TRUSTED_ORIGINS = ['customercredit-production.up.railway.app']'
 ]
 
 ROOT_URLCONF = 'core.urls'
