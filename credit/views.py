@@ -3,7 +3,7 @@ from .models import Customer, Credit
 from django.shortcuts import get_object_or_404, render
 from .forms import CreditForm , CreateCreditForm
 from django.contrib import messages
-
+from django.views.decorators.csrf import csrf_exempt
 # Create your views here.
 
 def all_credits(request):
@@ -18,6 +18,7 @@ def verify(request, id):
     data.save()
     credit = Credit.objects.filter(is_active=True)
     return render(request, 'credits/home.html', {'credits': credit})
+@csrf_exempt
 def update_credit(request, id):
     obj= get_object_or_404(Credit, id=id)
         
