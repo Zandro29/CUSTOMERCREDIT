@@ -69,7 +69,7 @@ TEMPLATES = [
     },
 ]
 
-CSRF_TRUSTED_ORIGINS = ['customercredit-production.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://customercredit-production.up.railway.app/']
 
 WSGI_APPLICATION = 'core.wsgi.application'
 
